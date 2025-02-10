@@ -53,7 +53,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-bottom: 1rem; /* extra space at bottom */
+    padding-bottom: 0.1rem; /* extra space at bottom */
     color: #1A76D1; 
   }
   
