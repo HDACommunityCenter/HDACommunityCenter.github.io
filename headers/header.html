@@ -1,68 +1,122 @@
 <!-- header.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HDACC Official Webpage</title>
 
-<!-- Link to the header.css file (if your setup allows linking from this partial).
-     Otherwise, link this stylesheet in your main page's <head>. -->
-        <link rel="stylesheet" href="header.css">
+  <!-- Google Font -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+    rel="stylesheet"
+  />
 
-        <!-- ABOUT SECTION -->
-        <section id="about">
-          <div class="section-content">
-            <h2>About</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-              Aenean ac est at orci faucibus consectetur. Donec sed velit a nulla 
-              lacinia vulputate vel a nunc. Fusce quis viverra mi.
-            </p>
-          </div>
-        </section>
-        
-        <!-- OUR TEAM SECTION -->
-        <section id="ourteam">
-          <div class="section-content">
-            <h2>Our Team</h2>
-            <div class="team-container">
-              <!-- Replace src with your actual team member images -->
-              <img src="https://via.placeholder.com/150" alt="Team Member 1">
-              <img src="https://via.placeholder.com/150" alt="Team Member 2">
-              <img src="https://via.placeholder.com/150" alt="Team Member 3">
-              <!-- Add more <img> elements as needed -->
-            </div>
-          </div>
-        </section>
-        
-        <!-- CONTACT SECTION -->
-        <section id="contact">
-          <div class="section-content">
-            <h2>Contact</h2>
-            <div class="contact-container">
-              <div class="map">
-                <!-- Example Google Map embed. Replace with your location if desired -->
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.0869652996213!2d-122.41941548468017!3d37.774929279758836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085808bedb2dd11%3A0x8aa28f685dd9a226!2sSan%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1614821643527!5m2!1sen!2sus"
-                  width="100%"
-                  height="250"
-                  style="border:0;"
-                  allowfullscreen=""
-                  loading="lazy">
-                </iframe>
-              </div>
-              <div class="details">
-                <p><strong>Phone:</strong> +1 (555) 123-4567</p>
-                <p><strong>Email:</strong> info@hdacc.com</p>
-                <p><strong>Address:</strong> 123 HDACC Street, Example City</p>
-              </div>
-            </div>
-          </div>
-        </section>
-        
-        <!-- FAQ SECTION -->
-        <section id="faq">
-          <div class="section-content">
-            <h2>FAQ</h2>
-            <p>
-              <!-- FAQ content goes here -->
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-              Nulla facilisi. Suspendisse potenti.
-            </p>
-          </div>
-        </section>
+  <!-- Your header.css -->
+  <link rel="stylesheet" href="header.css" />
+
+  <!-- Optional: Smooth Scroll (if you want smooth anchor scrolling) -->
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body>
+  <!-- NAVIGATION -->
+  <nav class="main-nav">
+    <div class="logo">
+      <!-- Logo text or <img> -->
+      <a href="#">
+        <img src="https://hdacommunitycenter.github.io/img/hda_logo.png" alt="HDA Logo" />
+      </a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#our-team">Our Team</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+  </nav>
+
+  <!-- ABOUT SECTION -->
+  <section id="about" class="full-section">
+    <div class="section-content">
+      <h2>About</h2>
+      <p>
+        Welcome to HDACC! We’re a community-focused organization dedicated to
+        empowering individuals and families through a variety of programs, events,
+        and resources. Our mission is to create a supportive space where people can
+        connect, learn, and grow.
+      </p>
+    </div>
+  </section>
+
+  <!-- OUR TEAM SECTION -->
+  <section id="our-team" class="full-section">
+    <div class="section-content">
+      <h2>Our Team</h2>
+      <p>
+        Meet the passionate individuals driving our mission forward.
+      </p>
+      <div class="team-container">
+        <!-- Replace placeholders with real team images -->
+        <div class="team-member">
+          <img src="https://via.placeholder.com/150" alt="Team Member 1" />
+          <h3>Member One</h3>
+          <p>Role / Position</p>
+        </div>
+        <div class="team-member">
+          <img src="https://via.placeholder.com/150" alt="Team Member 2" />
+          <h3>Member Two</h3>
+          <p>Role / Position</p>
+        </div>
+        <div class="team-member">
+          <img src="https://via.placeholder.com/150" alt="Team Member 3" />
+          <h3>Member Three</h3>
+          <p>Role / Position</p>
+        </div>
+        <!-- Add more team-member divs as needed -->
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact" class="full-section">
+    <div class="section-content">
+      <h2>Contact</h2>
+      <div class="contact-container">
+        <div class="map">
+          <!-- Example Google Map embed -->
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.0869652996213!2d-122.41941548468017!3d37.774929279758836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085808bedb2dd11%3A0x8aa28f685dd9a226!2sSan%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1614821643527!5m2!1sen!2sus"
+            width="100%"
+            height="250"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy">
+          </iframe>
+        </div>
+        <div class="details">
+          <p><strong>Phone:</strong> +1 (555) 123-4567</p>
+          <p><strong>Email:</strong> info@hdacc.com</p>
+          <p><strong>Address:</strong> 123 HDACC Street, Example City</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ SECTION -->
+  <section id="faq" class="full-section">
+    <div class="section-content">
+      <h2>FAQ</h2>
+      <p>
+        <strong>Q:</strong> How can I get involved?<br />
+        <strong>A:</strong> You can sign up for events or volunteer opportunities on our
+        website, or contact us via email for more info.
+      </p>
+      <!-- Add additional Q&A pairs as needed -->
+    </div>
+  </section>
+</body>
+</html>
