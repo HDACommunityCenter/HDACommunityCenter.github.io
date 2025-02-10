@@ -1,0 +1,83 @@
+/* about */
+/* header.css */
+
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Dark page background and general text styling */
+  body {
+    background-color: #222;  /* Dark background */
+    color: #fff;             /* Light text */
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+  }
+  
+  /* Each section takes up at least one full screen in height.
+     You can adjust if you prefer smaller/larger. */
+  section {
+    min-height: 100vh;        /* Full screen height */
+    display: flex;
+    align-items: center;      /* Vertically center content within the section */
+    justify-content: center;  /* Horizontally center the .section-content */
+    padding: 40px;
+  }
+  
+  /* A wrapper inside each section for consistent spacing and styling */
+  .section-content {
+    background-color: #444;    /* Slightly lighter than background */
+    padding: 40px;
+    border-radius: 8px;
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Headings */
+  .section-content h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  /* OUR TEAM: 3 images per row, centered, can wrap to multiple rows */
+  .team-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* space between images */
+    margin-top: 20px;
+  }
+  
+  .team-container img {
+    width: 150px;      /* Adjust as needed */
+    height: 150px;     /* Adjust as needed */
+    object-fit: cover; /* Crop image to fill */
+    border-radius: 8px;
+  }
+  
+  /* CONTACT SECTION: map on the left, details on the right on wide screens */
+  .contact-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  /* Remove default iframe border if any */
+  .map iframe {
+    border: none;
+  }
+  
+  /* For bigger screens: side-by-side layout */
+  @media (min-width: 768px) {
+    .contact-container {
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+    .map, .details {
+      width: 50%;
+    }
+  }
