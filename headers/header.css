@@ -50,11 +50,11 @@
   /* Each section fills full browser viewport height (minus nav) */
   .full-section {
     min-height: 100vh;
-    padding-top: 4rem; /* to avoid being hidden behind fixed nav */
+    padding-top: 2rem; /* to avoid being hidden behind fixed nav */
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-bottom: 2rem; /* extra space at bottom */
+    padding-bottom: 1rem; /* extra space at bottom */
     color: #1A76D1; 
   }
   
