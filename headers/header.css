@@ -50,7 +50,7 @@
   .full-section {
     /* min-height: 100vh; */
     padding-top: 0.5rem; /* to avoid being hidden behind fixed nav */
-    /* display: flex; */
+    display: flex;
     align-items: center;
     justify-content: center;
     padding-bottom: 0.1rem; /* extra space at bottom */
