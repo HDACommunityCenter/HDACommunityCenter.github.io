@@ -48,8 +48,8 @@
   
   /* Each section fills full browser viewport height (minus nav) */
   .full-section {
-    min-height: 20vh;
-    padding-top: 0.5rem; /* to avoid being hidden behind fixed nav */
+    min-height: 30vh;
+    padding-top: 5rem; /* to avoid being hidden behind fixed nav */
     display: flex;
     align-items: center;
     justify-content: center;
