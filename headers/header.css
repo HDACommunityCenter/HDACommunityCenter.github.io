@@ -13,6 +13,13 @@
     line-height: 1.6;
   }
   
+  .body span {
+    display: block;
+    margin-bottom: 5px;
+    color: #1A76D1;
+    font-size: 17px;
+  }
+  
   /* NAVIGATION (sticky at top) */
   .main-nav {
     position: fixed;
@@ -24,6 +31,8 @@
     padding: 0.75rem 1.5rem;
     z-index: 999; /* stays on top of other sections */
   }
+
+
   
   /* Logo area */
   .logo img {
