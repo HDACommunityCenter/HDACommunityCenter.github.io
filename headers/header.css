@@ -60,6 +60,13 @@
     padding-bottom: 0.1rem; /* extra space at bottom */
     color: #1A76D1; 
   }
+  .full-section p  {
+    display: block;
+    margin-bottom: 5px;
+    color: #000;
+    font-size: 17px;
+  }
+
   .full-section p span {
     display: block;
     margin-bottom: 5px;
