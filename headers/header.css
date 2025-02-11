@@ -61,14 +61,14 @@
     color: #1A76D1; 
   }
   .full-section p  {
-    display: block;
+    /* display: block; */
     margin-bottom: 5px;
     color: #000;
     font-size: 17px;
   }
 
   .full-section p span {
-    display: block;
+    /* display: block; */
     margin-bottom: 5px;
     color: #1A76D1;
     font-size: 17px;
