@@ -104,6 +104,17 @@
   overflow: hidden; /* ensures no accidental overflow from children */
 }
 
+
+#event1 {
+  background: linear-gradient(
+  to top right,
+  #f1c40f 0%,
+  #f1c40f 50%,
+  #3498db 50%,
+  #3498db 100%
+);
+}
+
 /* Basic text styling (you could also absolutely-position these, 
    but here's a simple approach) */
 .event-title {
