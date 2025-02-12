@@ -78,39 +78,53 @@
     <h2>Upcoming Events</h2>
     <div class="events-container">
       <!-- Event Card 1 -->
-      <div class="event-card">
-        <h3 class="event-title">Art therapy</h3>
-        <p class="event-description">
-          Description of the event goes here. Information, details, etc.
-        </p>
-        <p class="event-time-place">
-          Feb. 12th, 2-4 pm / Unit B, 169 Lexington Court, Waterloo
-        </p>
-      </div>
+      <!-- <a href="art_therapy.html" class="event-card"> -->
+        <div class="event-card", onclick="location.href='art_therapy.html';">
+          <h3 class="event-title">Art therapy</h3>
+          <p class="event-description">
+            Description of the event goes here. Information, details, etc.
+          </p>
+          <p class="event-time-place">
+            Feb. 12th, 2-4 pm / Unit B, 169 Lexington Court, Waterloo
+          </p>
+        </div>
+      <!-- </a> -->
 
       <!-- Event Card 2 -->
-      <div class="event-card">
-        <h3 class="event-title">The Museum - Sunflowers In My Heart</h3>
-        <p class="event-description">
-          Description of the event goes here. Information, details, etc.
-        </p>
-        <p class="event-time-place">
-          Mar. 1-31st, / The Museum, Kitchener
-        </p>
-      </div>
-
-      <!-- Event Card 3 (You can add as many as you want) -->
-      <div class="event-card">
-        <h3 class="event-title">Event 3</h3>
-        <p class="event-description">
-          Description of the event goes here. Information, details, etc.
-        </p>
-        <p class="event-time-place">
-          Time / Place
-        </p>
-      </div>
+      <!-- <a href="the_museum.html" class="event-card"> -->
+        <div class="event-card", onclick="location.href='the_museum.html';">
+          <h3 class="event-title">The Museum - Sunflowers In My Heart</h3>
+          <p class="event-description">
+            Description of the event goes here. Information, details, etc.
+          </p>
+          <p class="event-time-place">
+            Mar. 1-31st, / The Museum, Kitchener
+          </p>
+        </div>
+      <!-- </a> -->
+      
     </div>
+  
+
+    <!-- PAST EVENTS SECTION -->
+      <h2>Past Events</h2>
+      <div class="events-container">
+        <!-- Approach A: Wrap the card in an <a> so the whole card is clickable -->
+        <a href="event1.html" class="past-event-card">
+          <h3 class="event-title">Past Event 1</h3>
+          <p class="event-description">
+            This event occurred previously.
+          </p>
+          <p class="event-time-place">Time / Place</p>
+        </a>
+
+      </div>
+    </section>
   </section>
+
+  
+
+  
 
 </body>
 </html>

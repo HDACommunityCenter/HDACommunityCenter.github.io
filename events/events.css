@@ -107,15 +107,6 @@
 }
 
 
-#event1 {
-  background: linear-gradient(
-  to top right,
-  #f1c40f 0%,
-  #f1c40f 50%,
-  #3498db 50%,
-  #3498db 100%
-);
-}
 
 /* Basic text styling (you could also absolutely-position these, 
    but here's a simple approach) */
@@ -135,6 +126,51 @@
      bottom: 1rem;
   */
 }
+
+a.event-card {
+  text-decoration: none;  /* remove underline */
+  display: block;         /* make the anchor fill the card’s box */
+  color: inherit;         /* use .event-card’s color rules */
+}
+a.event-card:hover {
+  /* subtle hover effect, optional */
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+
+.past-event-card {
+  /* Use relative units for responsive sizing */
+  width: 90%;
+  max-width: 40rem;       /* 40rem ~ 640px on default 16px font-size */
+  margin: 1rem auto;      /* center and top/bottom spacing */
+  min-height: 12rem;      /* a bit of vertical space */
+  border-radius: 0.5rem;  /* rounded corners */
+
+  /* Position relative if you plan to absolutely position text elements */
+  position: relative;
+  
+  /* 
+     Linear gradient with 3 color segments => 2 diagonal “slash” lines.
+     Adjust the angle (to top right, to bottom right, etc.) as needed.
+  */
+  background: linear-gradient( 
+         to top right,
+         #999 0%,
+         #999 33%, 
+         #aaa 33%,
+         #aaa 66%,
+         #bbb 66%, 
+         #bbb 100%
+       ) !important;
+  
+  /* For legibility if the text is dark: add some padding inside */
+  padding: 1rem;
+  color: #000;
+  overflow: hidden; /* ensures no accidental overflow from children */
+}
+
+
 
 /* ============ MEDIA QUERIES ============ */
 
