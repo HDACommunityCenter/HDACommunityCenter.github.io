@@ -24,6 +24,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 0.75rem 1.5rem;
+    background-color: #e3e6ea;
     z-index: 999; /* stays on top of other sections */
   }
 
