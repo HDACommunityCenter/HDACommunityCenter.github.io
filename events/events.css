@@ -50,94 +50,63 @@
     color: #1A76D1; /* accent color */
   }
   
-  /* Each section fills full browser viewport height (minus nav) */
-  .full-section {
-    min-height: 30vh;
-    padding-top: 5rem; /* to avoid being hidden behind fixed nav */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-bottom: 0.1rem; /* extra space at bottom */
-    color: #1A76D1; 
-  }
+  /* EVENTS SECTION */
+#events {
+  padding: 40px 20px;
+  max-width: 1200px; /* Constrain width on large screens */
+  margin: 0 auto;    /* Center the section horizontally */
+}
 
-  .full-section p span {
-    margin-bottom: 5px;
-    color: #1A76D1;
-    font-size: 17px;
-  }
-  
-  /* Section container for styling each block */
-  .section-content {
-    max-width: 900px;
-    width: 100%;
-    border-radius: 8px;
-    padding: 2rem;
-    text-align: center;
-    /* Add subtle box shadow if desired */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  }
-  
-  /* Headings styling */
-  .section-content h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    color: #1A76D1;
-  }
-  
-  /* OUR TEAM - flexible grid for team members */
-  .team-container {
-    display: flex;
-    flex-wrap: wrap; /* wrap to new line if needed */
-    gap: 1.5rem;
-    justify-content: center;
-    margin-top: 1.5rem;
-  }
-  .team-member {
-    border-radius: 6px;
-    padding: 1rem;
-    width: 200px; /* adjust as needed */
-    text-align: center;
-  }
-  .team-member img {
-    width: 100%;
-    height: auto; /* maintain aspect ratio */
-    border-radius: 6px;
-    margin-bottom: 0.5rem;
-  }
-  .team-member h3 {
-    margin-bottom: 0.25rem;
-    color: #1A76D1;
-    font-size: 1.1rem;
-  }
-  
+#events h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
 
-  /* FAQ - simple styling; you can add accordions if needed */
-  #faq p {
-    margin-top: 1rem;
-    text-align: left; /* Left-align Q&A to separate from headings */
-  }
-  
-  /* Optional: Add a nice hover effect on links within sections */
-  .section-content a {
-    color: #1A76D1;
-    text-decoration: underline;
-    transition: opacity 0.3s ease;
-  }
-  .section-content a:hover {
-    opacity: 0.7;
-  }
+/* Container for all event cards */
+.events-container {
+  display: flex;
+  flex-wrap: wrap;   /* Allows cards to wrap to new lines if there's not enough space */
+  gap: 20px;         /* Spacing between cards */
+}
 
-  .event-card h3 {
-    font-size: 1.25rem;
-    margin-bottom: 10px;
+/* EVENT CARD STYLE */
+.event-card {
+  background-color: #ccc;  /* Light gray card background */
+  color: #000;             /* Dark text for contrast on gray */
+  border-radius: 8px;
+  padding: 20px;
+  position: relative;      /* Allows time/place to be absolutely positioned */
+  width: 100%;             /* Default: take full width on small screens */
+  min-height: 120px;       /* Ensure a bit of height for the content */
+}
+
+/* Event title */
+.event-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+}
+
+/* Time/place “pinned” to bottom-right */
+.event-card .time-place {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-weight: bold;
+}
+
+/* ============ MEDIA QUERIES ============ */
+
+/* On screens >= 768px (tablet & up), show 2 cards per row (or more if you adjust) */
+@media (min-width: 768px) {
+  .event-card {
+    width: calc(50% - 20px); /* 2 columns: 50% each minus the gap; adjust as needed */
   }
-  .event-card .description {
-    margin-bottom: 20px;
+}
+
+/* On screens >= 1024px (desktop & up), show 3 cards per row (adjust to taste) */
+@media (min-width: 1024px) {
+  .event-card {
+    width: calc(33.333% - 20px); /* 3 columns: ~33.3% each minus the gap */
   }
-  .event-card .time-place {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    font-weight: bold;
-  }
+}
