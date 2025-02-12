@@ -70,29 +70,57 @@
   gap: 20px;         /* Spacing between cards */
 }
 
-/* EVENT CARD STYLE */
 .event-card {
-  background-color: #ccc;  /* Light gray card background */
-  color: #000;             /* Dark text for contrast on gray */
-  border-radius: 8px;
-  padding: 20px;
-  position: relative;      /* Allows time/place to be absolutely positioned */
-  width: 100%;             /* Default: take full width on small screens */
-  min-height: 120px;       /* Ensure a bit of height for the content */
+  /* Use relative units for responsive sizing */
+  width: 90%;
+  max-width: 40rem;       /* 40rem ~ 640px on default 16px font-size */
+  margin: 1rem auto;      /* center and top/bottom spacing */
+  min-height: 12rem;      /* a bit of vertical space */
+  border-radius: 0.5rem;  /* rounded corners */
+
+  /* Position relative if you plan to absolutely position text elements */
+  position: relative;
+  
+  /* 
+     Linear gradient with 3 color segments => 2 diagonal “slash” lines.
+     Adjust the angle (to top right, to bottom right, etc.) as needed.
+  */
+  background: linear-gradient(
+    to top right,
+    /* First segment color stops: 0% up to 33.33% */
+    #f1c40f 0%,      
+    #f1c40f 33.33%,  
+    /* Second segment color stops: 33.33% up to 66.66% */
+    #2ecc71 33.33%,  
+    #2ecc71 66.66%,  
+    /* Third segment color stops: 66.66% up to 100% */
+    #3498db 66.66%,  
+    #3498db 100%
+  );
+  
+  /* For legibility if the text is dark: add some padding inside */
+  padding: 1rem;
+  color: #000;
+  overflow: hidden; /* ensures no accidental overflow from children */
 }
 
-/* Event title */
-.event-card h3 {
-  font-size: 1.25rem;
-  margin-bottom: 10px;
-}
-
-/* Time/place “pinned” to bottom-right */
-.event-card .time-place {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
+/* Basic text styling (you could also absolutely-position these, 
+   but here's a simple approach) */
+.event-title {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
   font-weight: bold;
+}
+.event-description {
+  margin-bottom: 1rem;
+}
+.event-time-place {
+  font-weight: bold;
+  /* Optionally move to bottom-right with absolute positioning if desired:
+     position: absolute;
+     right: 1rem;
+     bottom: 1rem;
+  */
 }
 
 /* ============ MEDIA QUERIES ============ */
