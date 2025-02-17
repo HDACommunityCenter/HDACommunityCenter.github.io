@@ -67,16 +67,22 @@
 
 /* Container for all event cards */
 .events-container {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 1200px;
+  /* display: flex; */
   flex-wrap: wrap;   /* Allows cards to wrap to new lines if there's not enough space */
+  margin: 0 auto;
   gap: 20px;         /* Spacing between cards */
 }
 
 .event-card {
   /* Use relative units for responsive sizing */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   width: 90%;
   max-width: 40rem;       /* 40rem ~ 640px on default 16px font-size */
-  margin: 1rem auto;      /* center and top/bottom spacing */
+  margin: 0 auto;      /* center and top/bottom spacing */
   min-height: 12rem;      /* a bit of vertical space */
   border-radius: 0.5rem;  /* rounded corners */
 
@@ -87,48 +93,30 @@
      Linear gradient with 3 color segments => 2 diagonal “slash” lines.
      Adjust the angle (to top right, to bottom right, etc.) as needed.
   */
-  background: linear-gradient(
-    to top right,
-    /* First segment color stops: 0% up to 33.33% */
-    #f1c40f 0%,      
-    #f1c40f 33.33%,  
-    /* Second segment color stops: 33.33% up to 66.66% */
-    #2ecc71 33.33%,  
-    #2ecc71 66.66%,  
-    /* Third segment color stops: 66.66% up to 100% */
-    #3498db 66.66%,  
-    #3498db 100%
-  );
-  
+
   /* For legibility if the text is dark: add some padding inside */
   padding: 1rem;
   color: #000;
   overflow: hidden; /* ensures no accidental overflow from children */
 }
 
-#art-therapy{
-  background: linear-gradient(
-    to top right,
-    /* First segment color stops: 0% up to 33.33% */
-    #f1c40f 0%,      
-    #f1c40f 50%,  
-    /* Third segment color stops: 66.66% up to 100% */
-    #2ecc71 50%,  
-    #2ecc71 100%
-  );
+#arts-program {
+  background: #f1c40f;
 }
 
-#the-museum{
-  background: linear-gradient(
-    to top right,
-    /* First segment color stops: 0% up to 33.33% */
-    #f1c40f 0%,      
-    #f1c40f 50%,  
-    /* Third segment color stops: 66.66% up to 100% */
-    #3498db 50%,  
-    #3498db 100%
-  );
+#edu-program{
+  background: #2ecc71;
 }
+
+#mus-program{
+  background: #3498db;
+}
+
+#ent-program{
+  background: #f56e6e;
+}
+
+
 
 /* Basic text styling (you could also absolutely-position these, 
    but here's a simple approach) */
@@ -160,37 +148,7 @@ a.event-card:hover {
   cursor: pointer;
 }
 
-
-.past-event-card {
-  /* Use relative units for responsive sizing */
-  width: 90%;
-  max-width: 40rem;       /* 40rem ~ 640px on default 16px font-size */
-  margin: 1rem auto;      /* center and top/bottom spacing */
-  min-height: 12rem;      /* a bit of vertical space */
-  border-radius: 0.5rem;  /* rounded corners */
-
-  /* Position relative if you plan to absolutely position text elements */
-  position: relative;
-  
-  /* 
-     Linear gradient with 3 color segments => 2 diagonal “slash” lines.
-     Adjust the angle (to top right, to bottom right, etc.) as needed.
-  */
-  background: linear-gradient( 
-         to top right,
-         #999 0%,
-         #999 33%, 
-         #aaa 33%,
-         #aaa 66%,
-         #bbb 66%, 
-         #bbb 100%
-       ) !important;
-  
-  /* For legibility if the text is dark: add some padding inside */
-  padding: 1rem;
-  color: #000;
-  overflow: hidden; /* ensures no accidental overflow from children */
-}
+ 
 
 
 
@@ -199,13 +157,14 @@ a.event-card:hover {
 /* On screens >= 768px (tablet & up), show 2 cards per row (or more if you adjust) */
 @media (min-width: 768px) {
   .event-card {
-    width: calc(50% - 20px); /* 2 columns: 50% each minus the gap; adjust as needed */
+    grid-template-columns: 1fr; /* single column */
+    width: calc(100% - 20px); /* 2 columns: 50% each minus the gap; adjust as needed*/
   }
 }
 
 /* On screens >= 1024px (desktop & up), show 3 cards per row (adjust to taste) */
 @media (min-width: 1024px) {
   .event-card {
-    width: calc(50% - 20px); /* 3 columns: ~33.3% each minus the gap */
+    width: calc(100% - 20px); /* 3 columns: ~33.3% each minus the gap */
   }
 }
