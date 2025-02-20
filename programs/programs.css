@@ -65,6 +65,15 @@
   text-align: center;
 }
 
+#events h3 {
+  color: #fff;
+}
+
+#events p {
+  color: #eee;
+}
+
+
 /* Container for all event cards */
 .events-container {
   display: grid;

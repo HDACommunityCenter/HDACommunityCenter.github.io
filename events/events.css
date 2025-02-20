@@ -15,7 +15,6 @@
   }
 
 
-  
   /* NAVIGATION (sticky at top) */
   .main-nav {
     position: fixed;
@@ -25,7 +24,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 0.75rem 1.5rem;
-    background-color: #e3e6ea;
+    background-color: #e9e9e9;
     z-index: 999; /* stays on top of other sections */
   }
 
@@ -49,7 +48,7 @@
     transition: color 0.3s ease;
   }
   .nav-links li a:hover {
-    color: #1A76D1; /* accent color */
+    color: #1A76D1; 
   }
   
   /* EVENTS SECTION */
@@ -89,15 +88,9 @@
   */
   background: linear-gradient(
     to top right,
-    /* First segment color stops: 0% up to 33.33% */
-    #f1c40f 0%,      
-    #f1c40f 33.33%,  
-    /* Second segment color stops: 33.33% up to 66.66% */
-    #2ecc71 33.33%,  
-    #2ecc71 66.66%,  
-    /* Third segment color stops: 66.66% up to 100% */
-    #3498db 66.66%,  
-    #3498db 100%
+    #3D9AF5 0%,
+    #1A76D1 50%,  
+    #1A76D1 100%
   );
   
   /* For legibility if the text is dark: add some padding inside */
@@ -106,28 +99,12 @@
   overflow: hidden; /* ensures no accidental overflow from children */
 }
 
-#art-therapy{
-  background: linear-gradient(
-    to top right,
-    /* First segment color stops: 0% up to 33.33% */
-    #f1c40f 0%,      
-    #f1c40f 50%,  
-    /* Third segment color stops: 66.66% up to 100% */
-    #2ecc71 50%,  
-    #2ecc71 100%
-  );
+#events p{
+  color: #ddd;
 }
 
-#the-museum{
-  background: linear-gradient(
-    to top right,
-    /* First segment color stops: 0% up to 33.33% */
-    #f1c40f 0%,      
-    #f1c40f 50%,  
-    /* Third segment color stops: 66.66% up to 100% */
-    #3498db 50%,  
-    #3498db 100%
-  );
+#events h3{
+  color: #eee;
 }
 
 /* Basic text styling (you could also absolutely-position these, 
@@ -178,12 +155,8 @@ a.event-card:hover {
   */
   background: linear-gradient( 
          to top right,
-         #999 0%,
-         #999 33%, 
-         #aaa 33%,
-         #aaa 66%,
-         #bbb 66%, 
-         #bbb 100%
+         #a2a8b0 0%,
+         #717985 100%
        ) !important;
   
   /* For legibility if the text is dark: add some padding inside */
